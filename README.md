@@ -47,5 +47,37 @@ Create a flask application for ML Ops
         make -j4
     
 #   Flask
+    Prerequisite
+    Python 2.6 or higher is usually required for installation of Flask. Although Flask and its dependencies work well with Python 3 (Python 3.3 onwards), many Flask extensions do not support it properly. Hence, it is recommended that Flask should be installed on Python 2.7.
+
+    Install virtualenv for development environment
+    virtualenv is a virtual Python environment builder. It helps a user to create multiple Python environments side-by-side. Thereby, it can avoid compatibility issues between the different versions of the libraries.
+
+    The following command installs virtualenv
+
+    pip install virtualenv
+    This command needs administrator privileges. Add sudo before pip on Linux/Mac OS. If you are on Windows, log in as Administrator. On Ubuntu virtualenv may be installed using its package manager.
+
+    Sudo apt-get install virtualenv
+    Once installed, new virtual environment is created in a folder.
+
+    mkdir newproj
+    cd newproj
+    virtualenv venv
+    To activate corresponding environment, on Linux/OS X, use the following −
+
+    venv/bin/activate
+    On Windows, following can be used
+
+    venv\scripts\activate
+    We are now ready to install Flask in this environment.
+
+    pip install Flask
+    The above command can be run directly, without virtual environment for system-wide installation.
 #   Docker
-install the docker extension in vs studio code or install the docker application on the local machine.
+    install the docker extension in vs studio code and install the docker desktop application on the local machine.
+    connect to your docker hub account and create a repository.
+    then; 
+        docker build -t follysage/pycaret:latest . # to build the the docker image
+        docker run -d -p 5000:5000 follysage/pycaret  # to run the container
+    
